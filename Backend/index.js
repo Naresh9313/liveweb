@@ -9,7 +9,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bookingRoutes from './modules/api/Booking/routes/bookingRoutes.js';
 
-
 dotenv.config();
 
 const app = express();
@@ -25,21 +24,18 @@ app.use(express.json());
 // );
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://liveweb-git-main-nareshs-projects-6e7b16cf.vercel.app/"
-    ],
+    origin: ['http://localhost:3000', 'https://liveweb-six.vercel.app/'],
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  }),
 );
 
 app.use('/auth', userRoutes);
 app.use('/event', eventRoutes);
 app.use('/booking', bookingRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Vercel Backend Working!");
+app.get('/', (req, res) => {
+  res.send('Vercel Backend Working!');
 });
 
 const __filename = fileURLToPath(import.meta.url);
