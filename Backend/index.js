@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: 'https://liveweb-mxuj.vercel.app',
+    origin: 'https://liveweb-jkan.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }),
