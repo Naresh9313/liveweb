@@ -27,7 +27,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://paper-3-naresh-prajapati.vercel.app"
+      "https://liveweb-git-main-nareshs-projects-6e7b16cf.vercel.app/"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
