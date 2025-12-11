@@ -16,44 +16,25 @@ function Register() {
       .required("Password is required"),
   });
 
-  // const handleSubmit = async (values) => {
-  //   try {
-  //     const res = await fetch("http://localhost:3001/auth/register", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(values),
-  //     });
+  const handleSubmit = async (values) => {
+    try {
+      const res = await fetch("http://localhost:3001/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
 
-  //     if (res.ok) {
-  //       alert("Registration Successful!");
-  //       navigate("/login");
-  //     } else {
-  //       const data = await res.json();
-  //       alert(data.message);
-  //     }
-  //   } catch (error) {
-  //     console.log("error:", error.message);
-  //   }
-  // };
-const handleSubmit = async (values) => {
-  try {
-    const res = await fetch("https://liveweb-o3y9.vercel.app/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-
-    if (res.ok) {
-      alert("Registration Successful!");
-      navigate("/login");
-    } else {
-      const data = await res.json();
-      alert(data.message);
+      if (res.ok) {
+        alert("Registration Successful!");
+        navigate("/login");
+      } else {
+        const data = await res.json();
+        alert(data.message);
+      }
+    } catch (error) {
+      console.log("error:", error.message);
     }
-  } catch (error) {
-    console.log("error:", error.message);
-  }
-};
+  };
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
