@@ -15,7 +15,7 @@ function Homepage() {
 
   const handleGet = async () => {
     try {
-      const url = `http://localhost:3001/event/getEvent?search=${search}&category=${category}&sort=${sort}&page=${page}&limit=${limit}`;
+      const url = `https://nareshprajapati9313.onrender.com/event/getEvent?search=${search}&category=${category}&sort=${sort}&page=${page}&limit=${limit}`;
 
       const res = await fetch(url, {
         headers: { Authorization: `Bearer ${token}` },
@@ -40,7 +40,7 @@ function Homepage() {
     }
 
     const res = await fetch(
-      `http://localhost:3001/booking/eventBooking?userId=${user}&eventId=${eventId}&tickets=1`,
+      `https://nareshprajapati9313.onrender.com/booking/eventBooking?userId=${user}&eventId=${eventId}&tickets=1`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 

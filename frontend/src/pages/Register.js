@@ -18,7 +18,7 @@ function Register() {
 
   const handleSubmit = async (values) => {
     try {
-      const res = await fetch("http://localhost:3001/auth/register", {
+      const res = await fetch("https://nareshprajapati9313.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),

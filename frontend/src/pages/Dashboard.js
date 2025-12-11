@@ -37,7 +37,7 @@ function Dashboard() {
       formData.append("eimage", values.eimage);
 
       const res = await axios.post(
-        "http://localhost:3001/event/addEvent",
+        "https://nareshprajapati9313.onrender.com/event/addEvent",
         formData,
         {
           headers: {
